@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+
+/* Body styling */
+body{
+    overflow-x: hidden;
+    max-width: 100%;
+}
+/* Header styling */
+header {
+    background-image:url(/assets/images/break-escape-header.jpg);
+    background-size: 1440px 100px;
+}
+.logo{
+    float:left;
+    height:100%;
+}
+.business-name{
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    margin-top: 20px;
+    color: #fafafa;
+}
+.business-slogan{
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin-left: 20px;
+    color: #fafafa;
+    
+}
+
+/* card Styling */
+.cards {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+.card {
+    flex: 0 1 calc(25% - 1em);
+    margin: 1rem .25em;
+}
+
+.card-styling{
+    padding-top:100px;
+    padding-bottom: 100px;
+}
+
+.container{
+    padding-top: 100px;
+    padding-left:150px;
+    display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+.container-text-image{
+    flex: 0 0 calc(50% - 1em);
+}
+.container-text-paragraph{
+    margin-top: 100px;
+    margin-left:25px;
+}
+.welcome-image{
+    border-radius: 2%;
+    float: absoloute right;
+}
+
+/* Footer styling */
+footer {
+    background-color:#e3f2fd; /* Background color */
+    font-family: "Playfair Display", serif; /* Font style and back up font.*/
+    color: #000000; /* Font color.*/
+    height: 100%; /* Footer height.*/
+    text-align: center; /* Text-allignment.*/
+}
+/* Social links styling */
+.social-links {
+    padding-bottom: 15px; /* Some padding from the bottom.*/
+}
+
+.social-links li a i {
+    width: 32px; /* Icon width.*/
+    height: 32px; /* icon height.*/
+    padding: 12px 0; /* Some padding.*/
+    border-radius: 50%; /* Icons made circular.*/
+    font-size: 13px; /* Font size.*/
+    line-height: 7px; /* Define line height.*/
+    text-align: center; /* Text allignment.*/
+    color: #fafafa; /* Font style and back up font.*/
+    background: #8f8f8f;
+    transition: all 0.35s ease-in-out;
+}
+/*social links turn green when howvered over with the mouse.*/
+.social-links li a i:hover {
+    background:#9cd1f8 ;
+}
+/*First row of rooter has a padding of 20px.*/
+#footer-details {
+    padding: 20px; /*Some padding*/
+}
+
+@media screen and (min-width:320px) and (max-width: 425px) /*For screens at 300px*/ {
+body{
+    overflow-x: hidden;
+    max-width: 100%;
+}
+/* Header styling */
+header {
+    background-image:url(/assets/images/break-escape-header.jpg);
+}
+.logo{
+    float:left;
+    max-width: 40%;
+}
+.business-name{
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin-left: 160px;
+    margin-top: -80px;
+    color: #fafafa;
+}
+.business-slogan{
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    margin-left: 170px;
+    margin-top: -10px;
+    color: #fafafa;
+    
+}
+.container{
+    padding-top: 25px;
+    padding-left:30px;
+    display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+.container-text-image{
+    flex: 0 0 calc(100% - 1em);
+}
+.container-text-paragraph{
+    margin-top: 25px;
+    margin-left:0px;
+}
+.cards {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+}
+.card {
+    flex: 0 1 calc(90% - 1em);
+}
+
+.card-styling{
+    padding-top:100px;
+    padding-bottom: 100px;
+    margin-left: 40px;
+}
+}
