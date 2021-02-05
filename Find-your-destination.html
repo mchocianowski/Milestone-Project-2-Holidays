@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css" type="text/css" />
+        <script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCv1PUCBm6njs4b7W4hR5TMdq2zJQZ-gUo&callback=initMap&libraries=&v=weekly" defer></script>
+
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <title>Break Escape</title>
+    </head>
+    <body class="body">
+        <header>
+            <div class="row no-gutters">
+                <div class="col-sm-4">
+                    <img src="assets/images/break-escape-logo.png" alt="website-logo" class="img-fluid logo" />
+                </div>
+                <div class="col-sm-8">
+                    <h1 class="business-name">Break Escape</h1>
+                    <h2 class="business-slogan">Hook it and Book it</h2>
+                </div>
+            </div>
+        </header>
+        <section>
+            <div class="row">
+                <div class="col-md-12">
+                    <nav class="navbar navbar-expand-md justify-content-center navbar-light" style="background-color: #9bd1f8;">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="Find-your-destination.html">Find your destination</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contact.html">Contact us</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            <div class="col-sm-12">
+                <div class="container-contact form-container">
+                    <form name="userInput" id="userInput" onsubmit="return false">
+                        <label for="climate">What Climate do your prefer?</label>
+                        <select id="climate" name="climate" required>
+                            <option value="">Choose</option>
+                            <option value="hot">Hot</option>
+                            <option value="cold">Cold</option>
+                            <option value="neither">I don't mind</option>
+                        </select>
+
+                        <label for="type">What Type of destination do your prefer?</label>
+                        <select id="type" name="type" required>
+                            <option value="">Choose</option>
+                            <option value="beach">By the Beach</option>
+                            <option value="city">City Break</option>
+                            <option value="ski">Skiing Holiday</option>
+                            <option value="nature">Nature Adventure</option>
+                        </select>
+                        <label for="season">When would you like to travel?</label>
+                        <select id="season" name="season" required>
+                            <option value="">Choose</option>
+                            <option value="summer">Summer</option>
+                            <option value="winter">Winter</option>
+                        </select>
+                        <button onclick="validateForm()" id="submit">Submit</button>
+                    </form>
+                    <p id="result"></p>
+                    <div id="map"></div>
+                </div>
+            </div>
+        </section>
+        <!-- The footer code was outsourced from https://github.com/Code-Institute-Solutions/resume-miniproject-bootstrap4/blob/master/09-adding-footer-content/assets/css/style.css and edited to suit developer needs.-->
+        <footer class="container-fluid">
+            <div id="footer-details" class="row">
+                <div class="col-sm-12">
+                    <h5 class="uppercase general-sub">Place of residence.</h5>
+                    <p class="inline-block">
+                        10 Westmacott Drive Feltham London TW14 9RN
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h5 class="uppercase general-sub">Social</h5>
+                    <ul class="list-inline social-links">
+                        <li class="list-inline-item">
+                            <a target="_blank" href="https://www.facebook.com/mateusz.chocianowski/">
+                                <i class="fa fa-facebook" aria-hidden="true"></i>
+                                <span class="sr-only">Facebook</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a target="_blank" href="https://www.linkedin.com/in/mateusz-chocianowski-b68b6a1b1">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                                <span class="sr-only">LinkedIn</span>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a target="_blank" href="https://www.instagram.com/Matt.pl_97">
+                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                                <span class="sr-only">Instagram</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <script src="assets/js/holiday-finder.js"></script>
+    </body>
+</html>
