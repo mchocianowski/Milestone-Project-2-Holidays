@@ -64,7 +64,6 @@ header {
 }
 .welcome-image{
     border-radius: 2%;
-    float: absoloute right;
 }
 
 /* Footer styling */
@@ -114,7 +113,17 @@ textarea {
     margin-bottom: 16px; /* Bottom margin */
     resize: vertical; /* Allow the user to vertically resize the textarea (not horizontally) */
 }
-
+#submit{
+    background-color: #8f8f8f; /* Green background color. */
+    color: white; /* white text color */
+    padding: 12px 20px; /* Some padding */
+    border: none; /* No border around green background color */
+    border-radius: 4px; /* Rounded edges */
+    cursor: pointer;
+}
+#submit:hover{
+    background-color: #6bbbf5;
+}
 /* Style the submit button with a specific background color etc */
 input[type="submit"] {
     background-color: #8f8f8f; /* Green background color. */
@@ -142,7 +151,12 @@ input[type="submit"]:hover {
     margin-bottom: 50px;
     max-width: 100%;
 }
-
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
 @media screen and (min-width:320px) and (max-width: 425px) /*For screens at 300px*/ {
 body{
     overflow-x: hidden;
