@@ -11,37 +11,42 @@
         type="text/css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
         type="text/css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js">
-    </script>
+    <!--EmailJs API setup-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script type="text/javascript">
         (function () {
             emailjs.init("user_a3RE4vsdN1JFGjslyP32o");
         })();
     </script>
     <script type="text/javascript">
+        //Contact Form function to instruct the api when and what to send in the form.
         window.onload = function () {
-            document.getElementById('contactform').addEventListener('submit', function (event) {
+            document.getElementById("contactform").addEventListener("submit", function (event) {
                 event.preventDefault();
-                // these IDs from the previous steps
-                emailjs.sendForm('gmail', 'Mateusz', this)
-                    .then(function () {
-                        console.log('SUCCESS!');
-                    }, function (error) {
-                        console.log('FAILED...', error);
-                    });
+                emailjs.sendForm("gmail", "Mateusz", this).then(
+                    function () {
+                        console.log("SUCCESS!");
+                    },
+                    function (error) {
+                        console.log("FAILED...", error);
+                    }
+                );
+                window.location.reload();
             });
-        }
+        };
     </script>
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Break Escape</title>
 </head>
 
 <body class="body">
     <header>
+        <!--Add a website logo-->
         <div class="row no-gutters">
             <div class="col-sm-4">
                 <img src="assets/images/break-escape-logo.png" alt="website-logo" class="img-fluid logo" />
             </div>
+            <!--Add a website heading and slogan.-->
             <div class="col-sm-8">
                 <h1 class="business-name">Break Escape</h1>
                 <h2 class="business-slogan">Hook it and Book it</h2>
@@ -49,6 +54,7 @@
         </div>
     </header>
     <section>
+        <!--Bootstrap Navigation bar.-->
         <div class="row">
             <div class="col-md-12">
                 <nav class="navbar navbar-expand-md justify-content-center navbar-light"
@@ -67,29 +73,33 @@
                 </nav>
             </div>
         </div>
+        <!--Contact form-->
         <div class="col-sm-12">
             <div class="container-contact form-container">
-                <form id="contactform">
-                    <label for="fname">Full Name</label>
+                <form id="contactform" name="contact-form">
+                    <label for="fname" class="form-input">Full Name</label>
                     <input type="text" id="fname" name="from_name" placeholder="Your full name.." required />
 
-                    <label for="e-mail">E-mail Address</label>
+                    <label for="e-mail" class="form-input">E-mail Address</label>
                     <input type="email" id="e-mail" name="from_email" placeholder="example@example.com" required />
-                    <label for="subject">Subject</label>
-                    <textarea id="subject" name="subject" placeholder="Write something.." style="height: 200px;"
-                        required></textarea>
-                    <input type="submit" value="Submit" name="work_request" id="submit" />
+                    <label for="subject" class="form-input">Subject</label>
+                    <textarea id="subject" name="enquiery_request" placeholder="Write something.."
+                        style="height: 200px;" required></textarea>
+                    <input type="submit" value="Submit" name="enquiery_request" id="submit" />
                 </form>
             </div>
         </div>
     </section>
-    <!-- The footer code was outsourced from https://github.com/Code-Institute-Solutions/resume-miniproject-bootstrap4/blob/master/09-adding-footer-content/assets/css/style.css and edited to suit developer needs.-->
+    <!-- The footer code was copied from my milestone 1 project.-->
     <footer class="container-fluid">
         <div id="footer-details" class="row">
             <div class="col-sm-12">
-                <h5 class="uppercase general-sub">Place of residence.</h5>
+                <h5 class="uppercase general-sub">Break Away</h5>
                 <p class="inline-block">
-                    10 Westmacott Drive Feltham London TW14 9RN
+                    Suggestions provided on this website are suggestions only. Break away cannot be held liable for any
+                    troubles caused during your break. Any problems should be taken up with your travel agent. Travel
+                    safe and always
+                    book ATOL Protected holidays.
                 </p>
             </div>
         </div>
