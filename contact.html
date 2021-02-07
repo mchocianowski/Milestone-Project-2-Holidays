@@ -14,26 +14,26 @@
     <!--EmailJs API setup-->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script type="text/javascript">
-        (function () {
-            emailjs.init("user_a3RE4vsdN1JFGjslyP32o");
+        (function() {
+            emailjs.init('user_a3RE4vsdN1JFGjslyP32o');
         })();
     </script>
     <script type="text/javascript">
         //Contact Form function to instruct the api when and what to send in the form.
         window.onload = function () {
-            document.getElementById("contactform").addEventListener("submit", function (event) {
+            document.getElementById('contactform').addEventListener('submit', function (event) {
                 event.preventDefault();
-                emailjs.sendForm("gmail", "Mateusz", this).then(
-                    function () {
+                emailjs.sendForm("gmail", "Mateusz", this)
+                .then(function () {
                         console.log("SUCCESS!");
                     },
                     function (error) {
                         console.log("FAILED...", error);
-                    }
-                );
+                    
+                    });
                 window.location.reload();
             });
-        };
+        }
     </script>
     <link rel="stylesheet" href="assets/css/style.css" />
     <title>Break Escape</title>
@@ -83,10 +83,16 @@
                     <label for="e-mail" class="form-input">E-mail Address</label>
                     <input type="email" id="e-mail" name="from_email" placeholder="example@example.com" required />
                     <label for="subject" class="form-input">Subject</label>
-                    <textarea id="subject" name="enquiery_request" placeholder="Write something.."
+                    <textarea id="subject" name="inquiry_request" placeholder="Write something.."
                         style="height: 200px;" required></textarea>
-                    <input type="submit" value="Submit" name="enquiery_request" id="submit" />
+                    <input type="submit" value="send" name="inquiry_request" id="submit" />
                 </form>
+                <script>
+                            window.onsubmit = function () {
+                                alert("Thank you for submitting your form. I will be in touch shortly.");
+                            };
+                        </script>
+
             </div>
         </div>
     </section>
