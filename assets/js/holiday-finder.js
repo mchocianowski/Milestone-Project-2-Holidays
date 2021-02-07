@@ -214,15 +214,17 @@ function validateForm() {
     const selectedDestinations = destinations.filter(dest => dest.climate === climate &&
         dest.type === type && dest.season === season);
     console.log(typeof (selectedDestinations));
-    //Use a forEach loop to cycle through array and output the name parameter.
-    selectedDestinations.forEach(function (destinations) {
-        var x = destinations.name;
-        document.getElementById("result").innerHTML += `<br>${x}`;
-    });
-    // Use a forEach loop to cycle through all 'selectedDestinations' and create a marker in goolge maps for each output.
-    selectedDestinations.forEach(dest => {
-        var marker = new google.maps.Marker();
-        marker.setPosition(new google.maps.LatLng(dest.location.lat, dest.location.lng));
-        marker.setMap(map);
-    });
+    if (selectedDestinations.length === 0) {
+        document.getElementById("result").innerHTML = "Sorry we were unable to match any suggestion."
+    } else {
+        document.getElementById("result").innerHTML = "";
+        //Use a forEach loop to cycle through array and output the name parameter.
+        selectedDestinations.forEach(function (dest) {
+            var x = dest.name;
+            document.getElementById("result").innerHTML += `<br>${x}`;
+            var marker = new google.maps.Marker();
+            marker.setPosition(new google.maps.LatLng(dest.location.lat, dest.location.lng));
+            marker.setMap(map);
+        });
+    }
 }
