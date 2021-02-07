@@ -164,6 +164,9 @@ url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;
      margin-bottom: 50px;
      max-width: 100%;
 }
+.Advise-paragraph{
+     font-family: "Playfair Display", serif;
+}
  #map {
      height: 400px;
     /* The height is 400 pixels */
