@@ -13,12 +13,15 @@
         <link rel="stylesheet" href="assets/css/style.css" />
         <title>Break Escape</title>
     </head>
+
     <body class="body">
         <header>
+            <!--Add a website logo-->
             <div class="row no-gutters">
                 <div class="col-sm-4">
                     <img src="assets/images/break-escape-logo.png" alt="website-logo" class="img-fluid logo" />
                 </div>
+                <!--Add a website heading and slogan.-->
                 <div class="col-sm-8">
                     <h1 class="business-name">Break Escape</h1>
                     <h2 class="business-slogan">Hook it and Book it</h2>
@@ -26,6 +29,7 @@
             </div>
         </header>
         <section>
+            <!--Bootstrap Navigation bar.-->
             <div class="row">
                 <div class="col-md-12">
                     <nav class="navbar navbar-expand-md justify-content-center navbar-light" style="background-color: #9bd1f8;">
@@ -43,18 +47,19 @@
                     </nav>
                 </div>
             </div>
+            <!--Destination finder form-->
             <div class="col-sm-12">
                 <div class="container-contact form-container">
                     <form name="userInput" id="userInput" onsubmit="return false">
-                        <label for="climate">What Climate do your prefer?</label>
+                        <label for="climate" class="form-input">What Climate do your prefer?</label>
                         <select id="climate" name="climate" required>
                             <option value="">Choose</option>
                             <option value="hot">Hot</option>
                             <option value="cold">Cold</option>
-                            <option value="neither">I don't mind</option>
+                            <option value="hot or cold">I don't mind (suitible if you're looking for a city break)</option>
                         </select>
 
-                        <label for="type">What Type of destination do your prefer?</label>
+                        <label for="type" class="form-input">What Type of destination do your prefer?</label>
                         <select id="type" name="type" required>
                             <option value="">Choose</option>
                             <option value="beach">By the Beach</option>
@@ -62,26 +67,30 @@
                             <option value="ski">Skiing Holiday</option>
                             <option value="nature">Nature Adventure</option>
                         </select>
-                        <label for="season">When would you like to travel?</label>
+                        <label for="season" class="form-input">When would you like to travel?</label>
                         <select id="season" name="season" required>
                             <option value="">Choose</option>
                             <option value="summer">Summer</option>
                             <option value="winter">Winter</option>
+                            <option value="both">Summer or Winter (suitible if you're looking for a city break)</option>
                         </select>
                         <button onclick="validateForm()" id="submit">Submit</button>
                     </form>
+                    <!--Print results from JS.-->
                     <p id="result"></p>
+                    <!--Google maps div-->
                     <div id="map"></div>
                 </div>
             </div>
         </section>
-        <!-- The footer code was outsourced from https://github.com/Code-Institute-Solutions/resume-miniproject-bootstrap4/blob/master/09-adding-footer-content/assets/css/style.css and edited to suit developer needs.-->
+        <!-- The footer code was copied from my milestone 1 project.-->
         <footer class="container-fluid">
             <div id="footer-details" class="row">
                 <div class="col-sm-12">
-                    <h5 class="uppercase general-sub">Place of residence.</h5>
+                    <h5 class="uppercase general-sub">Break Away</h5>
                     <p class="inline-block">
-                        10 Westmacott Drive Feltham London TW14 9RN
+                        Suggestions provided on this website are suggestions only. Break away cannot be held liable for any troubles caused during your break. Any problems should be taken up with your travel agent. Travel safe and always
+                        book ATOL Protected holidays.
                     </p>
                 </div>
             </div>
@@ -111,6 +120,7 @@
                 </div>
             </div>
         </footer>
+        <!--Source to JS file.-->
         <script src="assets/js/holiday-finder.js"></script>
     </body>
 </html>
