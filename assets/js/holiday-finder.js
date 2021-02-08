@@ -215,7 +215,7 @@ function validateForm() {
         dest.type === type && dest.season === season);
     console.log(typeof (selectedDestinations));
     if (selectedDestinations.length === 0) {
-        document.getElementById("result").innerHTML = "Sorry we were unable to match any suggestion."
+        document.getElementById("result").innerHTML = "Sorry we were unable to match any suggestion.";
     } else {
         document.getElementById("result").innerHTML = "";
         //Use a forEach loop to cycle through array and output the name parameter.
