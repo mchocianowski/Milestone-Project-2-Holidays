@@ -9,6 +9,7 @@ where a user can answer a few short questions and the program will evaluate thes
 and output a series of suggested destinations.
 I feel that inititiating this idea during this project is a storng foundation for a future expansion and will 
 improve my portfolio.
+Click here to find my project: https://mchocianowski.github.io/Milestone-Project-2-Holidays/
 ![Multi Device Mockup Image](assets/images/device-mockup.png)
 
 # **_Purpose:_**
