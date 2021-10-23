@@ -8,6 +8,7 @@ url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;
 }
 /* Header styling */
  header {
+     background-image:url(/assets/images/break-escape-header.jpg);
      background-size: 1440px 100px;
 }
 /* logo image styling */
